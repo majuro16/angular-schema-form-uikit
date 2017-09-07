@@ -1,0 +1,15 @@
+<div class="uk-form-row {{form.htmlClass}} schema-form-select">
+  <label class="uk-form-label {{form.labelHtmlClass}}" ng-show="showTitle()">
+    {{form.title}}
+  </label>
+  <select sf-field-model
+          ng-disabled="form.readonly"
+          sf-changed="form"
+          class="{{form.fieldHtmlClass}}"
+          schema-validate="form"
+          ng-options="item.value as item.name group by item.group for item in form.titleMap"
+          name="{{form.key.slice(-1)[0]}}">
+  </select>
+  <span class="uk-form-help-inline uk-text-muted">{{form.description}}</span>
+  <p class="uk-form-help-block uk-text-danger" sf-message></p>
+</div>

@@ -1,0 +1,14 @@
+<div class="uk-form-row checkbox schema-form-checkbox {{form.htmlClass}}">
+  <div class="uk-form-controls">
+     <input type="checkbox"
+           sf-changed="form"
+           ng-disabled="form.readonly"
+           sf-field-model
+           schema-validate="form"
+           class="{{form.fieldHtmlClass}}"
+           name="{{form.key.slice(-1)[0]}}">
+      <label ng-bind-html="form.title"></label>
+      <span class="uk-form-help-inline uk-text-muted">{{form.description}}</span>
+  </div>
+  <p class="uk-form-help-block uk-text-danger" sf-message></p>
+</div>

@@ -1,0 +1,18 @@
+<div class="uk-form-row schema-form-radios {{form.htmlClass}}" ng-class="">
+  <label class="uk-form-label {{form.labelHtmlClass}}"
+         sf-field-model schema-validate="form"
+         ng-show="showTitle()">{{form.title}}</label>
+  <div class="uk-form-controls uk-margin-top">
+      <input type="radio"
+             class="{{form.fieldHtmlClass}}"
+             sf-changed="form"
+             ng-disabled="form.readonly"
+             sf-field-model
+             ng-value="item.value"
+             name="{{form.key.join('.')}}"
+             ng-repeat-start="item in form.titleMap">
+      <label ng-class="{'uk-margin-right':!$last}" ng-repeat-end ng-bind-html="item.name" for="{{form.key.join('.')}}"></label>
+      <span class="uk-form-help-inline uk-text-muted">{{form.description}}</span>
+  </div>
+  <p class="uk-form-help-block uk-text-danger" sf-message></p>
+</div>

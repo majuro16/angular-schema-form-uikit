@@ -1,0 +1,24 @@
+<div class="uk-form-row schema-form-{{form.type}} {{form.htmlClass}}">
+  <label class="uk-form-label {{form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{form.key.slice(-1)[0]}}">{{form.title}}</label>
+
+  <input ng-if="!form.fieldAddonLeft && !form.fieldAddonRight"
+         ng-show="form.key"
+         type="{{form.type}}"
+         step="any"
+         sf-changed="form"
+         placeholder="{{form.placeholder}}"
+         class="{{form.fieldHtmlClass}}"
+         id="{{form.key.slice(-1)[0]}}"
+         sf-field-model
+         ng-disabled="form.readonly"
+         schema-validate="form"
+         name="{{form.key.slice(-1)[0]}}"
+         aria-describedby="{{form.key.slice(-1)[0] + 'Status'}}"
+         ng-class="{'uk-form-danger': hasError() }"
+         maxlength="{{form.schema.maxLength || 524288}}"
+         minlength="{{form.schema.minLength || 0}}"
+         >
+
+  <span class="uk-form-help-inline uk-text-muted">{{form.description}}</span>
+  <p class="uk-form-help-block uk-text-danger" sf-message></p>
+</div>
