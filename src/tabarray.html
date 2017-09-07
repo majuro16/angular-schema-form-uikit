@@ -18,7 +18,7 @@
           ng-disabled="form.schema.maxItems <= modelArray.length"
           ng-click="$event.preventDefault() || (selected.tab = appendToArray().length - 1)">
         <a href="#">
-          <i class="glyphicon glyphicon-plus"></i>
+          <span uk-icon="icon: plus"></span>
           {{ form.add || 'Add'}}
           </a>
       </li>
@@ -63,7 +63,7 @@
           ng-disabled="form.schema.maxItems <= modelArray.length"
           ng-click="$event.preventDefault() || (selected.tab = appendToArray().length - 1)">
         <a href="#">
-          <i class="glyphicon glyphicon-plus"></i>
+          <span uk-icon="icon: plus"></span>
           {{ form.add || 'Add'}}
           </a>
       </li>
