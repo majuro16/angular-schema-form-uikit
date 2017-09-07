@@ -4,7 +4,7 @@
          value="{{form.title}}"
          ng-disabled="form.readonly"
          ng-if="form.type === 'submit'">
-  <button class="btn {{ form.style || 'btn-default' }}"
+  <button class="btn {{ form.style || 'uk-button-default' }}"
           type="button"
           ng-click="buttonClick($event,form)"
           ng-disabled="form.readonly"
